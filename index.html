@@ -3,26 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Consultor de CNPJ</title>
+  <title>AVATEK | Consulta CNPJ</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <div class="container">
-    <h1>Consulta Rápida de CNPJ</h1>
-    <p>Utilizando a BrasilAPI para buscar dados públicos.</p>
+  <header>
+    <h1>AVATEK | Consulta de CNPJ</h1>
+  </header>
+
+  <main class="card">
+    <div class="card-header">
+      <h2>Consultar Dados de um CNPJ</h2>
+      <p>Digite o número do CNPJ para buscar os dados cadastrais na Receita Federal.</p>
+    </div>
     
     <div class="input-group">
-      <input type="text" id="cnpj-input" placeholder="Digite apenas os números do CNPJ" value="00000000000191" maxlength="14">
+      <input type="text" id="cnpj-input" placeholder="Digite apenas os 14 números" maxlength="14">
       <button id="consultar-btn">Consultar</button>
     </div>
     
-    <div id="loading" class="hidden">Buscando...</div>
+    <div id="loading" class="hidden">
+      <div class="spinner"></div>
+      Buscando informações...
+    </div>
 
-    <pre id="resultado"></pre>
-    
-  </div>
-
+    <div id="resultado"></div>
+  </main>
+  
   <script src="script.js"></script>
 </body>
 </html>
