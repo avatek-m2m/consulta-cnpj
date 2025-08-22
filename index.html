@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultor de CNPJ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Consulta Rápida de CNPJ</h1>
+    <p>Utilizando a BrasilAPI para buscar dados públicos.</p>
+    
+    <div class="input-group">
+      <input type="text" id="cnpj-input" placeholder="Digite apenas os números do CNPJ" value="00000000000191" maxlength="14">
+      <button id="consultar-btn">Consultar</button>
+    </div>
+    
+    <div id="loading" class="hidden">Buscando...</div>
+
+    <pre id="resultado"></pre>
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
